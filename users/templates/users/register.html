@@ -1,0 +1,27 @@
+{% extends 'users/base.html' %}
+{% block content %}
+
+<div class="header">
+  <h2>Register</h2>
+</div>
+
+<div class="form-group">
+  <form method="post">
+    {% csrf_token %}
+    <label>{{ user_form.username.label }}</label>
+    {{ user_form.username }}
+    <label>{{ user_form.email.label }}</label>
+    {{ user_form.email }}
+    <label>{{ profile_form.phone.label }}</label>
+    {{ profile_form.phone }}
+    <label>{{ user_form.password.label }}</label>
+    {{ user_form.password }}
+    <label>{{ user_form.password2.label }}</label>
+    {{ user_form.password2 }}
+    <input style="margin-top: 5px;" class="button" type="submit" value="Register">
+    <br>
+    <p>Have an account? <a href="{% url 'login' %}">Login</a></p>
+  </form>
+</div>
+
+  {% endblock content %}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+    <title>e-Store</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" 
+    rel="stylesheet">
+
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        body{
+            background-color: #f0f0f0;
+            font-family: 'Open Sans', sans-serif;
+            padding-top: 50px;
+        }
+
+        .container{
+            max-width: 750px;
+            margin: auto;
+            background-color: #FFF;
+            -webkit-box-shadow: 2px 2px 20px -4px rgba(0, 0, 0, 0.21);
+            box-shadow: 2px 2px 20px -4px rgba(0, 0, 0, 0.21);
+        }
+
+        .header {
+            background: linear-gradient(90deg, #8799ff 0%, #677dff 40%, #3956ff 100%);
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px 5px 1px 1px;
+            padding: 10px;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+            background-color: #677dff;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #788cff;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            color: #007bff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #1236fd;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+</body>
+</html>
