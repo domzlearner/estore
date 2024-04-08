@@ -1,0 +1,17 @@
+{% extends 'products/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="header">
+    <div>
+      <a style="font-size: 20px; text-decoration: none" href="{% url 'product-list' %}">&#x25C4;</a>
+    </div>
+</div>
+
+<div class="form-group">
+        <p>Description: {{ product.description }}</p>
+        <p>Price: {{ product.price }}</p>
+        <img src="{% static 'images/' %}{{ product.image_filename }}" alt="{{ product.name }}">
+</div>
+{% endblock %}
